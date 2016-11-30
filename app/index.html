@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="phonelist" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>AFCU Phone List</title>
+	<meta name="description" content="">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="Sat, 01 Dec 2001 00:00:00 GMT">
+	<link rel="stylesheet" href="https://assets.americafirst.com/program/air/css/bootstrap-3.3.1.min.css">
+    <!-- <link rel="stylesheet" href="bower_components/Bootflat/bootflat/css/bootflat.min.css">
+    <link rel="stylesheet" href="bower_components/flat-ui/dist/css/flat-ui.min.css"> -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Muli">
+	<link rel="stylesheet" href="assets/css/app.css">
+
+    <!--(if target dev)><!-->
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
+	<script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+    <!--<!(endif)-->
+
+    <!--(if target tst || prod)>
+    <link rel="stylesheet" href="assets/css/vendor/html5-boilerplate/css/normalize.css">
+	<link rel="stylesheet" href="assets/css/vendor/html5-boilerplate/css/main.css">
+	<script src="assets/js/vendor/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+    <!(endif)-->
+</head>
+
+<body>
+
+    <div id="content" class="container">
+
+        <div class="header clearfix text-center">
+
+            <img src="assets/img/logo-afcu-white-500.png" width="250" height="86" />
+
+        </div>
+
+        <div class="content" ng-view></div>
+
+        <footer class="text-center footer">
+
+            <p>&copy;2015 America First Credit Union </p>
+
+        </footer>
+
+    </div>
+	
+	<!-- For production use: 
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-route.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-resource.min.js"></script>
+	-->
+
+    <!--(if target dev)><!-->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="bower_components/angular-img-fallback/angular.dcb-img-fallback.min.js"></script>
+    <script src="components/config/config.dev.js"></script>
+    <!--<!(endif)-->
+
+    <!--(if target tst || prod)>
+    <script src="assets/js/vendor/angular/angular.min.js"></script>
+	<script src="assets/js/vendor/angular-route/angular-route.min.js"></script>
+	<script src="assets/js/vendor/angular-resource/angular-resource.min.js"></script>
+    <script src="assets/js/vendor/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="assets/js/vendor/angular-img-fallback/angular.dcb-img-fallback.min.js"></script>
+    <!(endif)-->
+
+    <script src="app.js"></script>
+
+    <!--(if target tst)>
+    <script src="components/config/config.tst.js"></script>
+    <!(endif)-->
+
+    <!--(if target prod)>
+    <script src="components/config/config.prod.js"></script>
+    <!(endif)-->
+
+	<script src="components/controllers/controllers.js"></script>
+	<script src="components/services/services.js"></script>
+    <script src="components/directives/directives.js"></script>
+    
+    <!-- Bootstrap -->
+    <script src="https://assets.americafirst.com/program/air/js/vendor/jquery-latest.min.js"></script>
+    <script src="https://assets.americafirst.com/program/air/js/vendor/bootstrap-3.3.1.min.js"></script>
+    <!--(if target dev)><!-->
+    <script src="bower_components/jquery-backstretch/jquery.backstretch.min.js"></script>
+    <!--<!(endif)-->
+    <!--(if target tst || prod)>
+    <script src="assets/js/vendor/jquery-backstretch/jquery.backstretch.min.js"></script>
+    <!(endif)-->
+    <!-- Bootflat's JS files 
+    <script src="bower_components/Bootflat/bootflat/js/icheck.min.js"></script>
+    <script src="bower_components/Bootflat/bootflat/js/jquery.fs.selecter.min.js"></script>
+    <script src="bower_components/Bootflat/bootflat/js/jquery.fs.stepper.min.js"></script> -->
+    
+    <script>$.backstretch("assets/img/hike.jpg");</script>
+    
+</body>
+
+</html>

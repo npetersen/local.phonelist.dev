@@ -1,0 +1,26 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="close()"><span aria-hidden="true">&times;</span></button>
+    <h1>{{ modalOptions.headerText }}</h1>
+</div>
+
+<div class="modal-body">
+    <div class="row">
+        <div class="col-md-4 text-center">
+            <img ng-src="{{modalOptions.image}}" class="img-responsive img-thumbnail" fallback-src="assets/img/unavailable.gif" loading-src="assets/img/712.gif" />
+        </div>
+        <div class="col-md-8">
+            <h3>{{ modalOptions.title }}</h3>
+            <h4>{{ modalOptions.deptName }}</h4>
+            <ul>
+                <li>Extension: <a href="tel:{{modalOptions.extension}}">{{ modalOptions.extension }}</a></li>
+                <li>Phone: <a href="tel:{{modalOptions.busPhoneNum}}">{{ modalOptions.busPhoneNum }}</a></li>
+                <li>Mobile: <a href="tel:{{modalOptions.mobile}}">{{ modalOptions.mobile }}</a></li>
+                <li>Email: <a href="mailto:{{modalOptions.email}}">{{ modalOptions.email }}</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="modal-footer">
+    <button class="btn btn-primary" do-focus="true" ng-enter="close()" ng-click="close()">{{ modalOptions.closeButtonText }}</button>
+</div>

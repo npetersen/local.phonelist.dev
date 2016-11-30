@@ -1,0 +1,26 @@
+<!-- <pre>Model: {{ selected | json }}</pre> -->
+<!-- http://plnkr.co/edit/eAdqHY?p=preview -->
+<!-- http://stackoverflow.com/questions/22104498/how-to-clear-text-from-angularui-typeahead-input -->
+<!-- http://stackoverflow.com/questions/16045069/limit-angular-ui-bootstrap-typeahead-to-specific-object-property -->
+<div class="row">
+
+    <div class="col-xs-12 text-center">
+
+        <h1>Phone List</h1>
+        <p>Search for employees, departments or branches.</p>
+        <div class="form-group has-feedback">
+            <input id="plTypeAhead"
+                   type="text"
+                   placeholder="Type what you are looking for"
+                   ng-model="selected"
+                   typeahead="searchedName as searchedName.name for searchedName in allNames | filter:{name: $viewValue} | limitTo:10"
+                   typeahead-loading="loadingNames"
+                   typeahead-on-select="onSelect($item); selected = '';"
+                   do-focus="true"
+                   class="form-control ">
+            <i ng-show="loadingNames" class="glyphicon glyphicon-refresh form-control-feedback"></i>
+        </div>
+
+    </div>
+
+</div>

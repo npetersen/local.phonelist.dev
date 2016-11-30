@@ -1,0 +1,59 @@
+<div class="row">
+    
+    <div class="col-md-12 text-center">
+
+        <a href="javascript:history.back()" id="backBtn" class="btn btn-primary pull-left" role="button"  do-focus="true" ng-enter="goBack()">
+            <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
+            &lt; Back
+        </a>
+        <h1>{{deptInfo.deptName}}</h1>
+        
+    </div>
+    
+</div>
+
+<div class="row">
+    
+    <div class="col-md-4">
+        
+        <h2>{{dspData.categoryLabel()}} Details</h2>
+        <p>Phone: <a href="tel:{{deptInfo.phoneNum}}" title="Phone">{{deptInfo.phoneNum}}</a></p>
+        <p>Fax: <abbr title="Fax">{{deptInfo.fax}}</abbr></p>
+        <address>
+            {{deptInfo.address1}}<br />
+            {{deptInfo.city}}, {{deptInfo.state}} {{deptInfo.zipCode}}
+        </address>
+        
+    </div>
+    
+    <div class="col-md-8">
+        
+        <h2>{{dspData.categoryLabel()}} Employees</h2>
+        <input id="empNameFilter" type="text" ng-model="empFilter.firstName" placeholder="Filter employees by first name" class="form-control" />
+        
+        <div class="table-responsive">
+            
+            <table id="empTable" class="table table-striped table-hover table-condensed">
+                <thead>
+                    <tr>
+                        <!-- <th ng-click="doSort(empNum)">Employee Number</th> -->
+                        <th ng-click="doSort(extension)">Extension</th>
+                        <th ng-click="doSort(firstName)">Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="emp in empsByDept.emps | filter:empFilter | orderBy:sortBy:reverse" ng-click="popModal(emp.empNum)">
+                        <!-- <td>{{emp.empNum}}</td> -->
+                        <td>{{emp.extension}}</td>
+                        <td>{{emp.firstName + " " + emp.lastName }}<span ng-if="emp.shortTitle">{{ " (" + emp.shortTitle + ")" }}</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+        
+    </div>
+    
+</div>
+
+<!-- <p>Showing of 'interpolate' filter: {{ 'Current version is v%VERSION%.' | interpolate }}</p> -->
